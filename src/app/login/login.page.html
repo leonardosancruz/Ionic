@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Iniciar Sesión
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="hg-login">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="hg-input-text">
+            <ion-input placeholder="Usuario" required [(ngModel)]="username">
+              <ion-icon name="person"></ion-icon>
+            </ion-input>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="hg-input-text">
+            <ion-input placeholder="Contraseña" required type="password" [(ngModel)]="password">
+              <ion-icon name="key"></ion-icon>
+            </ion-input>
+          </div>
+        </ion-col>
+      </ion-row>
+      <div class="hg-divider-50"></div>
+      <ion-row>
+        <ion-col>
+          <ion-button size="small" color="primary">Ingresar</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="small" color="primary">Registrar</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <a href="">Recordar tu contraseña?</a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
