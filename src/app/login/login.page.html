@@ -26,10 +26,21 @@
           </div>
         </ion-col>
       </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="hg-input-text">
+            <ion-select [compareWith]="compareWith" placeholder="Tipo Documento">
+              <ion-select-option *ngFor="let user of tipDoc" value="{{user.id}}">{{user.name}}</ion-select-option>
+            </ion-select>
+          </div>
+        </ion-col>
+      </ion-row>
       <div class="hg-divider-50"></div>
       <ion-row>
         <ion-col>
           <ion-button size="small" color="primary">Ingresar</ion-button>
+          <ion-button size="small" color="primary" (click)="getAllUser()">getAllUser</ion-button>
+          <ion-button size="small" color="primary" (click)="getUser()">getUser</ion-button>
         </ion-col>
         <ion-col>
           <ion-button size="small" color="primary">Registrar</ion-button>
