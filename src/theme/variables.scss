@@ -185,7 +185,6 @@
     --ion-item-background-activated: #313131;
   }
 
-
   /*
    * Material Design Dark Theme
    * -------------------------------------------
@@ -220,7 +219,7 @@
     --ion-color-step-900: #e7e7e7;
     --ion-color-step-950: #f3f3f3;
 
-    --ion-item-background: #1A1B1E;
+    --ion-item-background: #1a1b1e;
   }
 
   ion-title.title-large {
@@ -240,10 +239,58 @@
   height: 50px;
 }
 
-/* Login */
+.hg-content ion-datetime {
+  text-align: justify;
+  height: 40px;
+  padding: 10px 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(214, 214, 214, 1);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(214, 214, 214, 1);
+  box-shadow: 0px 0px 10px 1px rgba(214, 214, 214, 1);
+}
 
-.hg-login ion-button {
-  width: 100%;
+.hg-content ionic-selectable {
+  text-align: justify;
+  height: 40px;
+  padding: 0px 12px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(214, 214, 214, 1);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(214, 214, 214, 1);
+  box-shadow: 0px 0px 10px 1px rgba(214, 214, 214, 1);
+}
+
+.hg-content ion-input {
+  text-align: justify;
+  height: 40px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(214, 214, 214, 1);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(214, 214, 214, 1);
+  box-shadow: 0px 0px 10px 1px rgba(214, 214, 214, 1);
+}
+
+.hg-content ion-select {
+  text-align: justify;
+  height: 40px;
+  padding: 11px 15px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(214, 214, 214, 1);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(214, 214, 214, 1);
+  box-shadow: 0px 0px 10px 1px rgba(214, 214, 214, 1);
+}
+
+.hg-content ion-col {
+  text-align: center;
+}
+.hg-content ion-icon {
+  color: gray;
+  padding: 10px;
+}
+
+.hg-content .hg-text-error{
+  color: red;
+  text-align: center;
+  font-size: 12px;
 }
 
 .hg-login a {
@@ -251,35 +298,33 @@
 }
 
 @media (min-width: 0px) {
-  .hg-login {
-    padding-top: 20%;
-    padding-left: 10%;
-    padding-right: 10%;
+  .hg-content {
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
 @media (min-width: 400px) {
-  .hg-login {
-    padding-top: 10%;
-    padding-left: 10%;
-    padding-right: 10%;
+  .hg-content {
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
 @media (min-width: 700px) {
-  .hg-login {
-    padding-top: 10%;
-    padding-left: 20%;
-    padding-right: 20%;
+  .hg-content {
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
 @media (min-width: 1024px) {
-  .hg-login {
-    padding-top: 10%;
-    padding-left: 30%;
-    padding-right: 30%;
+  .hg-content {
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
-
-/* Login */

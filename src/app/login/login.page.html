@@ -1,51 +1,61 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title>
-      Iniciar Sesión
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content>
-  <div class="hg-login">
+<ion-content fullscreen>
+  <div class="hg-content">
     <ion-grid>
       <ion-row>
         <ion-col>
-          <div class="hg-input-text">
-            <ion-input placeholder="Usuario" required [(ngModel)]="username">
-              <ion-icon name="person"></ion-icon>
-            </ion-input>
-          </div>
+          <ion-text color="primary">
+            <h1>MediExpress</h1>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <div class="hg-divider-20"></div>
+      <ion-row>
+        <ion-col>
+          <ion-text>
+            <h4>Iniciar Sesión</h4>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <div class="hg-divider-10"></div>
+      <ion-row>
+        <ion-col>
+          <ion-input placeholder="Documento" required [(ngModel)]="documento">
+            <ion-icon name="person"></ion-icon>
+          </ion-input>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <div class="hg-input-text">
-            <ion-input placeholder="Contraseña" required type="password" [(ngModel)]="password">
-              <ion-icon name="key"></ion-icon>
-            </ion-input>
-          </div>
+          <ion-input placeholder="Contraseña" required type="password" [(ngModel)]="contrasena">
+            <ion-icon name="key"></ion-icon>
+          </ion-input>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <div class="hg-input-text">
-            <ion-select [compareWith]="compareWith" placeholder="Tipo Documento">
-              <ion-select-option *ngFor="let user of tipDoc" value="{{user.id}}">{{user.name}}</ion-select-option>
-            </ion-select>
-          </div>
+          <ion-select value="notifications" interface="action-sheet"
+            placeholder="Tipo Documento" [(ngModel)]="tipoDocumento">
+            <ion-select-option *ngFor="let user of tipDoc" value="{{user.idtipodocumento}}">{{user.descripcion}}</ion-select-option>
+          </ion-select>
         </ion-col>
       </ion-row>
-      <div class="hg-divider-50"></div>
       <ion-row>
         <ion-col>
-          <ion-button size="small" color="primary">Ingresar</ion-button>
-          <ion-button size="small" color="primary" (click)="getAllUser()">getAllUser</ion-button>
-          <ion-button size="small" color="primary" (click)="getUser()">getUser</ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button size="small" color="primary">Registrar</ion-button>
+          <ion-text class="hg-text-error">
+            {{mensajeError}}
+          </ion-text>
         </ion-col>
       </ion-row>
+      <div class="hg-divider-20"></div>
+      <ion-row>
+        <ion-col>
+          <ion-button size="small" color="primary" (click)="ingresar()">Ingresar</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button size="small" color="primary" (click)="registrar()">Registrar</ion-button>
+        </ion-col>
+      </ion-row>
+      <div class="hg-divider-10"></div>
       <ion-row>
         <ion-col>
           <a href="">Recordar tu contraseña?</a>

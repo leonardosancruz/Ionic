@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Medicamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="hg-content">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
+          <ionic-selectable item-content [(ngModel)]="medicamento" [items]="medicamentos" itemValueField="idmedicamento"
+            itemTextField="descripcioncliente" [canSearch]="true" (onChange)="portChange($event)"
+            placeholder="Seleccione Medicamento">
+
+          </ionic-selectable>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

@@ -1,13 +1,37 @@
-ion-col {
-    text-align: center;
+.hg-content ion-text h1 {
+    text-shadow: 1px 1px 1px #03a8b787;
 }
-ion-icon{
+.hg-content ion-text h4 {
     color: gray;
 }
+@media (min-width: 0px) {
+    .hg-content {
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
 
-.hg-input-text {
-    text-align: justify;
-    height: 50px;
-    padding: 6px 12px;
-    border-bottom: 1px solid gray;
+@media (min-width: 400px) {
+    .hg-content {
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (min-width: 700px) {
+    .hg-content {
+        padding-top: 5%;
+        padding-left: 40%;
+        padding-right: 40%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hg-content {
+        padding-top: 5%;
+        padding-left: 40%;
+        padding-right: 40%;
+    }
 }
