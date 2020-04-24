@@ -18,7 +18,7 @@ export class LoginPage implements OnInit {
   contrasena: string;
   tipoDocumento: number;
   mensajeError: string;
-
+  
   constructor(
     private userService: UsuarioService,
     private TipoDocumentoService: TipoDocumentoService,
@@ -58,6 +58,10 @@ export class LoginPage implements OnInit {
   }
   registrar() {
     this.router.navigate(['register']);
+  }
+
+  mapa(){
+    this.router.navigate(['ubicacion']);
   }
 
 }

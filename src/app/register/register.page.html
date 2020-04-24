@@ -7,69 +7,84 @@
 </ion-header>
 <ion-content>
   <div class="hg-content">
-    <ion-grid>
-      <ion-row>
-        <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
-          <ion-select value="notifications" interface="action-sheet" placeholder="Tipo Documento"
-            [(ngModel)]="tipoDocumento">
-            <ion-select-option *ngFor="let user of tipDoc" value="{{user.idtipodocumento}}">{{user.descripcion}}
-            </ion-select-option>
-          </ion-select>
-        </ion-col>
-        <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
-          <ion-input placeholder="Numero Documento" required [(ngModel)]="documento">
-          </ion-input>
-        </ion-col>
-        <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
-          <ion-input placeholder="Primer Nombre" required [(ngModel)]="primerNombre">
-          </ion-input>
-        </ion-col>
-        <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
-          <ion-input placeholder="Segundo Nombre" required [(ngModel)]="segundoNombre">
-          </ion-input>
-        </ion-col>
-        <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
-          <ion-input placeholder="Primer Apellido" required [(ngModel)]="primerApellido">
-          </ion-input>
-        </ion-col>
-        <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
-          <ion-input placeholder="Segundo Apellido" required [(ngModel)]="segundoApellido">
-          </ion-input>
-        </ion-col>
-        <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
-          <ion-datetime placeholder="Fecha Expedicion" displayFormat="YYYY-MM-DD" required [(ngModel)]="fechaExpedicion">
-          </ion-datetime>
-        </ion-col>
-        <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
-          <ion-datetime placeholder="Fecha Nacimiento"  displayFormat="YYYY-MM-DD" required [(ngModel)]="fechaNacimiento">
-          </ion-datetime>
-        </ion-col>
-        <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
-          <ion-input placeholder="Direccion" required [(ngModel)]="direccion">
-          </ion-input>
-        </ion-col>
-        <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
-          <ion-input placeholder="Correo" required [(ngModel)]="correo">
-          </ion-input>
-        </ion-col>
-        <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
-          <ion-input placeholder="Contraseña" type="password" required [(ngModel)]="contrasenaInicial">
-          </ion-input>
-        </ion-col>
-        <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
-          <ion-input placeholder="Repita Contraseña" type="password" required [(ngModel)]="contrasenaFinal">
-          </ion-input>
-        </ion-col>
-      </ion-row>
-      <div class="hg-divider-20"></div>
-      <ion-row>
-        <ion-col>
-          <ion-button size="small" color="primary" (click)="aceptar()">Aceptar</ion-button>
-        </ion-col>
-        <ion-col>
-          <ion-button size="small" color="primary" (click)="cancelar()">Cancelar</ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <form (ngSubmit)="registrar()">
+      <ion-grid>
+        <ion-row>
+          <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
+            <ion-select value="notifications" interface="action-sheet" placeholder="Tipo Documento" name="tipoDocumento"
+              [(ngModel)]="ngUsuario.tipoDocumento">
+              <ion-select-option *ngFor="let user of tipDoc" value="{{user.idtipodocumento}}">{{user.descripcion}}
+              </ion-select-option>
+            </ion-select>
+          </ion-col>
+          <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
+            <ion-input placeholder="Numero Documento" required [(ngModel)]="ngUsuario.documento" name="documento">
+            </ion-input>
+          </ion-col>
+          <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
+            <ion-input placeholder="Primer Nombre" required [(ngModel)]="ngUsuario.primerNombre" name="primerNombre">
+            </ion-input>
+          </ion-col>
+          <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
+            <ion-input placeholder="Segundo Nombre" required [(ngModel)]="ngUsuario.segundoNombre" name="segundoNombre">
+            </ion-input>
+          </ion-col>
+          <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
+            <ion-input placeholder="Primer Apellido" required [(ngModel)]="ngUsuario.primerApellido"
+              name="primerApellido">
+            </ion-input>
+          </ion-col>
+          <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
+            <ion-input placeholder="Segundo Apellido" required [(ngModel)]="ngUsuario.segundoApellido"
+              name="segundoApellido">
+            </ion-input>
+          </ion-col>
+          <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
+            <ion-datetime placeholder="Fecha Expedicion" displayFormat="YYYY-MM-DD" required
+              [(ngModel)]="ngUsuario.fechaExpedicion" name="fechaExpedicion"></ion-datetime>
+          </ion-col>
+          <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
+            <ion-datetime placeholder="Fecha Nacimiento" displayFormat="YYYY-MM-DD" required
+              [(ngModel)]="ngUsuario.fechaNacimiento" name="fechaNacimiento"></ion-datetime>
+          </ion-col>
+          <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
+            <ion-input placeholder="Direccion" required [(ngModel)]="ngUsuario.direccion" name="direccion"></ion-input>
+          </ion-col>
+          <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
+            <ion-input placeholder="Correo" required [(ngModel)]="ngUsuario.correo" name="correo">
+            </ion-input>
+          </ion-col>
+          <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
+            <ion-input placeholder="Contraseña" type="password" required [(ngModel)]="ngUsuario.contrasenaInicial"
+              name="contrasenaInicial">
+            </ion-input>
+          </ion-col>
+          <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
+            <ion-input placeholder="Repita Contraseña" type="password" required [(ngModel)]="ngUsuario.contrasenaFinal"
+              name="contrasenaFinal">
+            </ion-input>
+          </ion-col>
+        </ion-row>
+        <div class="hg-divider-20"></div>
+        <ion-row>
+          <ion-col>
+            <ion-text class="hg-text-error">
+              {{mensajeError}}
+            </ion-text>
+          </ion-col>
+        </ion-row>
+        <div class="hg-divider-20"></div>
+        <ion-row>
+          <ion-col>
+            <ion-button size="small" color="primary" type="submit" block>
+              Aceptar
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button size="small" color="primary" (click)="cancelar()">Cancelar</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
   </div>
 </ion-content>

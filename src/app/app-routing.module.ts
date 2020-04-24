@@ -22,6 +22,14 @@ const routes: Routes = [
     path: 'medicamento',
     loadChildren: () => import('./medicamento/medicamento.module').then( m => m.MedicamentoPageModule)
   },
+  {
+    path: 'ubicacion',
+    loadChildren: () => import('./ubicacion/ubicacion.module').then( m => m.UbicacionPageModule)
+  },
+  {
+    path: 'ubicacion',
+    loadChildren: () => import('./ubicacion/ubicacion.module').then( m => m.UbicacionPageModule)
+  },
 
 ];
 
