@@ -11,7 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicSelectableModule } from 'ionic-selectable';
 import { DatePipe } from '@angular/common';
-import { GoogleMaps } from '@ionic-native/google-maps';
+import { GoogleMaps, Geocoder } from '@ionic-native/google-maps';
+import { Geolocation } from '@ionic-native/geolocation/ngx/';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,6 +28,8 @@ import { GoogleMaps } from '@ionic-native/google-maps';
     SplashScreen,
     DatePipe,
     GoogleMaps,
+    Geolocation,
+    Geocoder,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

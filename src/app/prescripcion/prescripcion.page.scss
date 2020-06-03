@@ -1,0 +1,22 @@
+ion-grid {
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(214, 214, 214, 1);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(214, 214, 214, 1);
+    box-shadow: 0px 0px 10px 1px rgba(214, 214, 214, 1);
+}
+
+ion-card-header ion-col {
+    text-align: left;
+}
+
+.hg-content ion-icon {
+    color: #ffffff;
+    padding: 10px;
+  }
+ion-card-content ion-col {
+    border: 1px solid #e5e5e5;
+}
+
+.hg-tabla-titulo{
+    color: #222222;
+    font-size: medium;
+}

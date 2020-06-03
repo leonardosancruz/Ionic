@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Detalle
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <h2>Prescripción {{ dataPrescripcion.idprescripcion }}</h2>
+    </ion-list-header>
+    <ion-item (click)="buscarPrescripcion()">
+      <ion-label>
+        <h2>IPS: {{ dataPrescripcion.ips.descripcion }}</h2>
+        <h2>Medico: {{ dataPrescripcion.usuario.nombre }} {{ dataPrescripcion.usuario.apellidos }}</h2>
+        <h2>Fecha Creación: {{ dataPrescripcion.fechacreacion }}</h2>
+      </ion-label>
+      <ion-icon name="map"></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      <h2>Medicamentos</h2>
+    </ion-list-header>
+    <ion-item *ngFor="let item of dataPrescripcion.medicamentos" (click)="buscarMedicamento(item)">
+      <ion-label>
+        <h2>{{ item.datosmedicamento.descripcioncliente }}</h2>
+        <h2>Cantidad: {{ item.cantidad }}</h2>
+      </ion-label>
+      <ion-icon name="map"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

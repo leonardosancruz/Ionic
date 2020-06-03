@@ -14,7 +14,8 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
-  },  {
+  },
+  {
     path: 'prescripcion',
     loadChildren: () => import('./prescripcion/prescripcion.module').then( m => m.PrescripcionPageModule)
   },
@@ -27,10 +28,13 @@ const routes: Routes = [
     loadChildren: () => import('./ubicacion/ubicacion.module').then( m => m.UbicacionPageModule)
   },
   {
-    path: 'ubicacion',
-    loadChildren: () => import('./ubicacion/ubicacion.module').then( m => m.UbicacionPageModule)
+    path: 'salir',
+    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
   },
-
+  {
+    path: 'prescripcion-detalle',
+    loadChildren: () => import('./prescripcion-detalle/prescripcion-detalle.module').then( m => m.PrescripcionDetallePageModule)
+  }
 ];
 
 @NgModule({

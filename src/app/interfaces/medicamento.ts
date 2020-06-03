@@ -1,4 +1,5 @@
 export interface Medicamento {
+    codigoatc: string;
     idmedicamento: number;
     estado: string;
     idgrupoprincipioactivo: number;

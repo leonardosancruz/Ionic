@@ -4,6 +4,9 @@
 .hg-content ion-text h4 {
     color: gray;
 }
+.hg-content ion-button {
+    width: 80%;
+}
 @media (min-width: 0px) {
     .hg-content {
         padding-top: 5%;
@@ -15,23 +18,23 @@
 @media (min-width: 400px) {
     .hg-content {
         padding-top: 5%;
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 20%;
+        padding-right: 20%;
     }
 }
 
 @media (min-width: 700px) {
     .hg-content {
         padding-top: 5%;
-        padding-left: 40%;
-        padding-right: 40%;
+        padding-left: 30%;
+        padding-right: 30%;
     }
 }
 
 @media (min-width: 1024px) {
     .hg-content {
         padding-top: 5%;
-        padding-left: 40%;
-        padding-right: 40%;
+        padding-left: 35%;
+        padding-right: 35%;
     }
 }

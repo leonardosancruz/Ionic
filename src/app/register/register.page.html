@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-title>
-      Registrar
+      <h3>Registrar</h3>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -54,6 +54,24 @@
             <ion-input placeholder="Correo" required [(ngModel)]="ngUsuario.correo" name="correo">
             </ion-input>
           </ion-col>
+          <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
+            <ionic-selectable item-content [(ngModel)]="ngUsuario.departamento" [items]="departamento" name="departamento" itemValueField="iddepartamento"
+              itemTextField="descripcion" [canSearch]="true" placeholder="Seleccione Departamento" (onChange)="cargarCiudad($event.value)">
+            </ionic-selectable>
+          </ion-col>
+          <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
+            <ionic-selectable item-content [(ngModel)]="ngUsuario.ciudad" [items]="ciudad" name="ciudad" itemValueField="idciudad"
+              itemTextField="descripcion" [canSearch]="true" placeholder="Seleccione ciudad" (onChange)="cargarIps($event.value)">
+            </ionic-selectable>
+          </ion-col>
+          <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
+            <ionic-selectable item-content [(ngModel)]="ngUsuario.ips" [items]="ips" name="ips" itemValueField="idips"
+              itemTextField="descripcion" [canSearch]="true" placeholder="Seleccione Ips">
+            </ionic-selectable>
+          </ion-col>
+        </ion-row>
+        <div class="hg-divider-20"></div>
+        <ion-row>
           <ion-col size-lg="3" size-md="6" size-sm="6" size="12">
             <ion-input placeholder="Contraseña" type="password" required [(ngModel)]="ngUsuario.contrasenaInicial"
               name="contrasenaInicial">

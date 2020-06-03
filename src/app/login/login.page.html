@@ -19,6 +19,14 @@
       <div class="hg-divider-10"></div>
       <ion-row>
         <ion-col>
+          <ion-select value="notifications" interface="action-sheet"
+            placeholder="Tipo Documento" [(ngModel)]="tipoDocumento">
+            <ion-select-option *ngFor="let user of tipDoc" value="{{user.idtipodocumento}}">{{user.descripcion}}</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
           <ion-input placeholder="Documento" required [(ngModel)]="documento">
             <ion-icon name="person"></ion-icon>
           </ion-input>
@@ -29,14 +37,6 @@
           <ion-input placeholder="Contraseña" required type="password" [(ngModel)]="contrasena">
             <ion-icon name="key"></ion-icon>
           </ion-input>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-select value="notifications" interface="action-sheet"
-            placeholder="Tipo Documento" [(ngModel)]="tipoDocumento">
-            <ion-select-option *ngFor="let user of tipDoc" value="{{user.idtipodocumento}}">{{user.descripcion}}</ion-select-option>
-          </ion-select>
         </ion-col>
       </ion-row>
       <ion-row>
@@ -54,9 +54,7 @@
         <ion-col>
           <ion-button size="small" color="primary" (click)="registrar()">Registrar</ion-button>
         </ion-col>
-        <ion-col>
-          <ion-button size="small" color="primary" (click)="mapa()">Ubicacion</ion-button>
-        </ion-col>
+        
       </ion-row>
       <div class="hg-divider-10"></div>
       <ion-row>

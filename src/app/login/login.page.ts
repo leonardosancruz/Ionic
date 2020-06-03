@@ -48,7 +48,8 @@ export class LoginPage implements OnInit {
           if (user.idtipodocumento != this.tipoDocumento || user.contrasena != Md5.hashStr(this.contrasena)) {
             this.mensajeError = "Documento o contraseña invalida.";
           } else {
-            this.navCtrl.navigateForward('register');
+            window.localStorage['idUsuario'] = user.idusuario;
+            this.navCtrl.navigateForward('prescripcion');
           }
         });
       }
@@ -59,9 +60,4 @@ export class LoginPage implements OnInit {
   registrar() {
     this.router.navigate(['register']);
   }
-
-  mapa(){
-    this.router.navigate(['ubicacion']);
-  }
-
 }
